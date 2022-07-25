@@ -1,0 +1,44 @@
+ 
+
+body{
+     
+    background-color: #D7E6F5;
+}
+
+/*---------------- [header]------------- */
+header{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    
+}
+.titre{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.user_icone{
+    display: flex;
+    /* border: 2px solid black; */
+    height: 40px;
+    width: 40px;
+}
+/*---------------- [produit]------------- */
+            /* contenaire parent  */
+.container{
+    width: 1000px;
+    /* border: 2px solid black; */   
+    
+}
+.section_1{
+    display: flex;
+}
+.card{
+    height: 400px;
+    width: 200px;
+    margin: 20px 0px 20px 20px ;
+}
+/* fin contenaire parent  */
+
+/*---------------- [footer]------------- */
+
+ 

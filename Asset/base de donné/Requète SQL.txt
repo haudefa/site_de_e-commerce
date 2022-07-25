@@ -1,0 +1,19 @@
+requete:1:
+
+SELECT  `lastname`, `firstname`, cart_items.quantity, clothes.categorie, clothes.price, types.name
+FROM `users`
+INNER JOIN `cart_items` ON cart_items.id = users.id
+INNER JOIN `clothes` ON clothes.id=cart_items.id_clothes
+INNER JOIN `types`ON types.id =clothes.id_types
+
+[lastname|	firstname|	quantity|	categorie|	price|	name	]
+
+requete:2:
+
+SELECT  `lastname`, `firstname`, `mail`, `phone_number`, `address`,`date_purchase`, `categorie` , `price`
+FROM `users`
+INNER JOIN orders ON orders.id_users = users.id
+INNER JOIN purchases ON purchases.id_orders=orders.id
+INNER  JOIN clothes ON clothes.id = purchases.id
+
+[lastname|	firstname|	mail|	phone_number|	address	date_purchase|	categorie]	price	
