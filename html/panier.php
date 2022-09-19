@@ -6,6 +6,7 @@
    //si la variable del existe
    if(isset($_GET['del'])){
     $id_del = $_GET['del'] ;
+    var_dump($id_del);
     //suppression
     unset($_SESSION['panier'][$id_del]);
    }

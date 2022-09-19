@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="Asset/css/style_h.css">
-    <link rel="stylesheet" href="Asset/css/style.css">
+    <link rel="stylesheet" href="../style/style_h.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,9 +22,9 @@
                 <li> <a class="active" href="index.html">Accueil</a></li>
                 <li> <a href="Homme.php">Homme</a></li>
                 <li> <a href="Femme.html">Femme</a></li>
-                <li> <a href="Enfants.html">Enfants</a></li>
+                <li> <a href="Enfants.php">Enfants</a></li>
                 <li> <a href="Contact.html">Contact</a></li>
-                <li id="lg-bag"> <a href="cart.html"><i class='bx bx-cart'></i></a></li>
+                <li id="lg-bag"> <a href="panier.php"><i class='bx bx-cart'></i></a></li>
                 <a href="#" id="close"><i class='bx bx-arrow-back' ></i></a>
                 
                 <li class="nav-item dropdown">
@@ -29,21 +32,21 @@
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAX1JREFUSEu1leExRDEUhb+tABWgAnRABagAHVABHaACVMBWQAfogApQAfPtJDvZbJK32bGZyY/33n333Hty7smIFa/RivOzCMARcAjshm1Nb2E/AeNWkS2AfeAO2Bro8gM4A15KcTWAK+Cyk75z4Db/pwRg4HVn8hh+Adyk/+YA0vK8ZPL420FKVw4gn5sFgB9A2u7Dt9PwvFaINcd2fJ8CqJbHSvVzrQMtKo8BFTYjU6s7qQBsAN/Zt3XgqxL/ANjlDIDa3vknAHPt5QC/jcPtpWiaOz2DFoD0eMi27pJKn6Wptia5U4AWRb3KfY+2kgK0DvkzaFsJurQPZ6Ykab8XD7kkU/Xv+6LPBBDlmM9DUaYi54OmEqSutXTZ1yTAbqcGOWQV0qaC8hmI+TxkHdcu42pahUH5hJpcA9P3YzdW7R1hbKqkQbOLVSzjqKVZad5oqkSKakqJxci5ttB14aSHKr9uaYlWos6lSwVNTK05bb1T1BO/yKXfk28u9g8XyEkZRdC/1QAAAABJRU5ErkJggg=="/>
                     </a>
                    
-                        <ul class="dropdown-menu" aria-labelledby="account  Dropdown">
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="account  Dropdown">
+                            <?php if(empty($_SESSION)) {?>
+                            <li><a class="dropdown-item"  href="#" data-bs-toggle="modal" data-bs-target="#signupModal">S'incrire</a></li>
+                            <li ><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Se connecter</a></li>
+                            <?php }?>
+                            <?php if (!empty($_SESSION)) { ?>
                             <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>
+                            <?php } ?>
+                            <!-- <button type="button" class="nav-link btn btn-light " data-bs-toggle="modal" data-bs-target="#signupModal">
+                              S'incrire
+                            </button>
+                            <button type="button" class="nav-link btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+                             Se connecter
+                            </button> -->
                         </ul>
-                    
-                
-               
-                    <ul class="dropdown-menu" aria-labelledby="account  Dropdown">
-                    <button type="button" class="nav-link btn btn-light " data-bs-toggle="modal" data-bs-target="#signupModal">
-                        S'incrire
-                    </button>
-                    
-                    <button type="button" class="nav-link btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Se connecter
-                    </button>
-                    </ul>
                 </li>
           
                 
@@ -70,7 +73,7 @@
                     </div>
                     <!-- signupModalLabel -->
                     <div class="modal-body">
-                        <form class="p-3" action="sign_up.php" method="post">
+                        <form class="p-3" action="signUp.php" method="post">
                             <div class="row mb-3">
                                 <label class="col-12 col-md-3 pl-0" for="firstname">Prénom</label>
                                 <input class="col-12 col-md-9" type="text" name="firstname" id="firstname" placeholder="Prénom" required>

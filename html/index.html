@@ -15,17 +15,15 @@
     <link rel="stylesheet" href="../style/style.css">
     <!-- CSS lien-->
 
-    <!-- CSS Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Bootstrap lien-->
+
 </head>
 
 <body>
+    <!-- header section -->
     <section id="header">
-        <a href="#"><img src="../images/logo.png" class="logo" alt=""></a>
+        <a href="#"><img src="../images/footer-logo.png" class="logo" alt=""></a>
         <div>
+            <!-- nav -->
             <ul id="navbar">
                 <li> <a class="active" href="index.html">Accueil</a></li>
                 <li> <a href="Homme.html">Homme</a></li>
@@ -34,58 +32,33 @@
                 <li> <a href="Contact.html">Contact</a></li>
                 <li id="lg-bag"> <a href="cart.html"><i class='bx bx-cart'></i></a></li>
                 <a href="#" id="close"><i class='bx bx-arrow-back' ></i></a>
-
-                <!-- <form action="">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit" value="search"><img src="../images/icon/search.png" alt="search"></button>
-                </form>-->
             </ul>
         </div>
+        <!--nav bugers-->
         <div id="mobile">
             <a href="cart.html"><i class='bx bx-cart'></i></a>
             <i id="bar" class='bx bx-menu'></i>
         </div>
     </section>
 
-    <section id="carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="1400" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../asset_v2/t-shirt_caroussel.jpg" class="d-block w-100" alt="t-shirt vitrine">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../asset_v2/jean_caroussel.jpg" class="d-block w-100" alt="jean vitrine">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../asset_v2/sneaker_caroussel.jpg" class="d-block w-100" alt="sneaker vitrine">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../asset_v2/jordan_caroussel.jpg" class="d-block w-100" alt="jordan vitrine">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+    <!-- carousel- -->
+    <section>
+        <div class="slider">
+            <img src="../images/carousel/jean_caroussel.jpg" alt="img1" class="img__slider active">
+            <img src="../images/carousel/jordan_caroussel.jpg" alt="img2" class="img__slider">
+            <img src="../images/carousel/sneaker_caroussel.jpg" alt="img3" class="img__slider">
+            <img src="../images/carousel/t-shirt_caroussel.jpg" alt="img4" class="img__slider">
+            <div class="suivant">
+                <i class='bx bx-chevron-right-circle'></i>
             </div>
+            <div class="precedent">
+                <i class='bx bx-chevron-left-circle'></i>
+            </div>
+        </div>
+
     </section>
 
+    <!-- banner caractéristique- -->
     <section id="feature" class="section-p1">
         <div class="fe_box">
             <img src="../images/livraison gratuite.png" alt="livraison gratuite">
@@ -114,6 +87,7 @@
 
     </section>
 
+    <!--products box  1-->
     <section id="products" class="section-p1">
         <h2>Produits Populaires</h2>
         <p>Nouvelle collection</p>
@@ -136,7 +110,7 @@
                 <i class='bx bx-cart cart'></i>
             </div>
             <div class="pro">
-                <img src="../images/about/team-1.jpg" alt="">
+                <img src="../images/product/f14.jpg" alt="">
                 <div class="des">
                     <span>Adidas</span>
                     <h5>cartoon astronaut</h5>
@@ -153,7 +127,7 @@
                 <i class='bx bx-cart cart'></i>
             </div>
             <div class="pro">
-                <img src="../images/about/team-2.jpg" alt="">
+                <img src="../images/product/fille/k2.png" alt="">
                 <div class="des">
                     <span>Adidas</span>
                     <h5>cartoon astronaut</h5>
@@ -259,12 +233,15 @@
         </div>
     </section>
 
+    <!--banner-->
     <section id="banner" .section-m1>
         <h4>Services De Réparation</h4>
-        <h2>Jusqu'à <span>70 % de réduction </span>-Tous les t-shirts et accessoires</h2>
+        <h2>Jusqu'à <span>70% de réduction </span>-Tous les t-shirts et accessoires</h2>
         <button class="normal">Explore plus</button>
+
     </section>
 
+    <!--products box  2-->
     <section id="products" class="section-p1">
         <h2>Nouveaux arrivages</h2>
         <p>Collection d'été Nouveau design</p>
@@ -286,7 +263,7 @@
                 <i class='bx bx-cart cart'></i>
             </div>
             <div class="pro">
-                <img src="../images/about/team-2.jpg" alt="">
+                <img src="../images/product/f1.jpg" alt="">
                 <div class="des">
                     <span>Adidas</span>
                     <h5>cartoon astronaut</h5>
@@ -334,7 +311,7 @@
                 <i class='bx bx-cart cart'></i>
             </div>
             <div class="pro">
-                <img src="../images/about/team-4.jpg" alt="">
+                <img src="../images/product/f2.jpg" alt="">
                 <div class="des">
                     <span>Adidas</span>
                     <h5>cartoon astronaut</h5>
@@ -399,7 +376,9 @@
             </div>
         </div>
     </section>
-    <section id="newsletter" class="section-p1 class=" section-m1 ">
+
+    <!-- newsletter- -->
+    <section id="newsletter" class="section-p1 ">
         <div class="newstext ">
             <h4>S'inscrire aux Newsletters</h4>
             <p>Recevez des mises à jour par e-mail sur notre dernière boutique <span>offres spéciales</span>
@@ -411,6 +390,7 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer class="section-p1 ">
 
         <div class="col ">
@@ -454,12 +434,12 @@
                 <h3>CONTACT</h3>
                 <p><i class='bx bxs-phone-call'></i>&nbsp 01 22 33 33 33</p>
                 <p><i class='bx bx-envelope'></i>&nbsp d_fashion@dw19.com</p>
-                <p class="parg "><i class='bx bxs-map'></i>&nbsp 2 rue Jean Mermoz
-                    <p>Batîment ARC EN CIEL <br>91080 COURCOURONNES</p>
-                </p>
+                <p><i class='bx bxs-map'></i> &nbsp 2 rue Jean Mermoz 91080</p>
+
             </div>
         </div>
     </footer>
+
 
     <script src="../js/javascript.js "></script>
 </body>

@@ -4,7 +4,6 @@
 .card_pro1{
     display: flex;
     background-color: #DDDBCB;
-    justify-content: space-around;
     align-items: center;
    /* */
 
@@ -56,13 +55,13 @@
  padding: 0.5%;
  width: 100%;
 }
-.card_pro2{
+/* .card_pro2{
   background-color: #DDDBCB;
   display: flex;
   justify-content: space-between;
-}
+} */
 
-.card_pro2 .pro{
+/* .card_pro2 .pro{
     width: 20%; 
     height: 80%;
     padding: 10px 12px;
@@ -88,7 +87,7 @@
 }
 .card_pro2 .pro img:hover{
     width: 78%;
-}
+} */
 
 @media screen and (max-width: 480px) {
     /*card 1 */
@@ -116,14 +115,14 @@
      
     }
     /* card 2 */
-   .card_pro2{
+   /* .card_pro2{
     display: flex;
     flex-wrap: wrap;
    }
    .card_pro2 .pro{
     width: 40%;
     margin: 2%;
-   }
+   } */
 
 }
 @media screen and (max-width: 1024px ){
