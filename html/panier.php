@@ -1,6 +1,6 @@
 <?php 
    session_start();
-   include_once "connexion.php";
+   include_once "includes/connexion.php";
 
    //supprimer les produits
    //si la variable del existe

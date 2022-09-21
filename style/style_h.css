@@ -55,39 +55,48 @@
  padding: 0.5%;
  width: 100%;
 }
-/* .card_pro2{
-  background-color: #DDDBCB;
-  display: flex;
-  justify-content: space-between;
-} */
+/* info pour inscription */
+.info{
+    background-color: #1B9AAA;
+    margin: 10% 20% 10% 20%;
+    padding: 10%;
+}
+.info ,h3, p,a{
+    text-align: center;
+}
+.info button{
+    
+        margin-left:42.5% ;
+        color: #050505;
+        background-color: #ffff;
+        border-radius: 40px;
+        padding: 2%;
+        border: none;
+    }
 
-/* .card_pro2 .pro{
-    width: 20%; 
-    height: 80%;
-    padding: 10px 12px;
-    border: 1px solid #050505;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-top: 5%  ;
-    margin-right: 2%;
-    margin-bottom: 5%;
-    transition: 0.2s ease;
-    position: relative;
+.info1{
     
+    background-color: #1B9AAA;
+    margin: 10% 20% 10% 20%;
+    padding: 10%;
 }
-.card_pro2 .pro img {
-    width: 80%;
-    
-    border-radius: 20px;
-    margin-left: 10%;
+.info1 h3, p{
+    text-align: center;
 }
-.card_pro2 .pro .des span,h5,h4 {
-    font-size: 14px;
+.info1 button{
+   text-align: center;
     color: #050505;
+    background-color: #ffff;
+    border-radius: 40px;
+    padding: 2%;
+    border: none;
 }
-.card_pro2 .pro img:hover{
-    width: 78%;
-} */
+.info2{
+
+    background-color: #1B9AAA;
+     margin: 10% 20% 10% 20%;
+    padding: 10%; 
+}
 
 @media screen and (max-width: 480px) {
     /*card 1 */
@@ -114,6 +123,7 @@
        margin-bottom: 5%;
      
     }
+
     /* card 2 */
    /* .card_pro2{
     display: flex;

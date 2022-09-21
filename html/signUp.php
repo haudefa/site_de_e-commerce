@@ -1,8 +1,6 @@
 <?php
-
-include_once 'connexion.php';
-include 'header.php';
-
+include_once 'includes/connexion.php';
+include 'includes/header.php';;
 
 // vérifire la conection 
 if ($con !== false); {
@@ -20,7 +18,7 @@ if ($con !== false); {
      
     // récuperer le resulta 
     $result=$result->fetch_assoc();
-
+ 
     if($result !==null){
 
       $_GET['mail']=$result['mail'];
@@ -33,7 +31,7 @@ if ($con !== false); {
     // }
 
       if(empty($_GET)){
-     
+     var_dump($_GET);
         
      // préparer la requette pour inserer les donner utilisateur 
      $query = $con->prepare(
@@ -46,32 +44,37 @@ if ($con !== false); {
     `password`
     )VALUES(?,?,?,?,?,?)"
     );
+    
     // on execute la requete en injectent les donner utilisateur 
     $result = $query->execute(array($lastname, $firstname, $mail, $address, $phone_number, $password));
+    var_dump($result);
+    $data=mysqli_query($con,"SELECT * FROM users WHERE mail='".$mail."'");
+     $data=$data->fetch_assoc();
+    var_dump($data);
 
-    $result=mysqli_query($con,"SELECT * FROM users WHERE mail='".$mail."'");
     
-     $data=$result->fetch_assoc();
-     $_SESSION['user_id']=$data['id'];
-     $_SESSION['role']=$data['role'];
-    
-
-  }else{
-    echo"<div>
-    <h2>une ereur c'est produit pendand l'inscription</h2>
-    <p>le mail ou le numéro de téléphone est deja utilisé</p>
-    <a href='#'>Revenir a la page d'acueil </a>
- </div>";
-  }
-  if($data!==false){
-    if(!empty($_SESSION)){
-      echo"<div>
-      <h2>l'inscription est un sucecce</h2>
-      <a href='#'>connecter vous</a>
-   </div>";
+     if($data!==false){
+      $_SESSION['user_id']=$data['id'];
+      // $_SESSION['role']=$data['role'];
+      if(!empty($_SESSION)){
+        echo"<div class='info'>
+        <h2 calsse='error'>l'inscription est un sucecce</h2>
+        <a href='index.php' class='btn btn-primary'>connecter vous</a>
+     </div>";
+      }
     }
-  }
-    
-  } 
-  }
+  }else{
+       echo"<div class='info1'>
+       <h3>une ereur c'est produit pendant l'inscription</h3>
+       <p>le mail ou le numéro de téléphone est deja utilisé</p>
+       <p>veuiller recomancer l'inscription </p>
+       <button data-bs-toggle='modal' data-bs-target='#signupModal'>
+       S'incrire
+       </button>     
+       </div>";
+  }      
+ } 
+}
 
+
+include "includes/footer.php";
